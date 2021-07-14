@@ -13,14 +13,14 @@
 }
 html {
   font-size: 62.5%;
-  --header1: calc(6.4rem);
+  --header1: calc(6rem);
   --header2: calc(4.8rem);
   --header3: calc(2.8rem);
-  --header4: calc(1.8rem);
+  --header4: calc(2.2rem);
   --text: calc(1.6rem);
-  --main-color: #2d25a0;
+  --main-color: #00004a;
   --header-color: #ffffff;
-  --second-header-color: #18191f;
+  --second-header-color: #00004a;
   --btn-color: #e02c6d;
   --text-color: #6c6c6c;
 }
@@ -29,13 +29,14 @@ body {
 }
 h1 {
   font-size: var(--header1);
-  color: #000000;
+  color: var(--second-header-color);
 }
 h2 {
   font-size: var(--header2);
 }
 h3 {
   font-size: var(--header3);
+  color: var(--second-header-color);
 }
 h4 {
   font-size: var(--header4);
@@ -47,13 +48,13 @@ li,
 a,
 p {
   font-size: var(--text);
+  color: var(--text-color);
 }
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
-  color: #ffffff;
 }
 
 /*-------------------
@@ -89,9 +90,14 @@ nav {
   color: #ffffff;
   font-weight: 500;
 }
+.nav-links li a:hover {
+  color: var(--btn-color);
+  font-weight: 200;
+}
 
 .btn {
   background-color: var(--btn-color);
+  color: #ffffff;
   padding: 1rem 2.4rem;
 }
 .fas {
@@ -128,6 +134,119 @@ Hero Section Start
 .hero-img img {
   width: 100rem;
 }
+.img-hover:hover {
+  transform: rotateZ(30deg);
+  transition: all 2s;
+}
 /* ---------------------
 Hero Section End 
 ------------------------*/
+
+/* ---------------------
+Top Player Section Start 
+------------------------*/
+.top-players {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  margin: 10rem auto;
+}
+
+.top-player {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.players {
+  width: 35rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+  margin: 3rem;
+  padding: 2.5rem;
+}
+.players h3 {
+  padding: 1rem 0;
+}
+.player-img {
+  width: 30rem;
+  border-radius: 0.5rem;
+}
+
+/* -------------------
+Top Player Section End 
+--------------------*/
+
+/* -------------------
+Highlight Section Start 
+--------------------*/
+.highlights-container {
+  height: 70vh;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-top: 3rem;
+}
+
+.highlights {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highlights-title {
+  color: var(--second-header-color);
+  padding-bottom: 2.5rem;
+}
+
+.highlights p {
+  margin-bottom: 3.5rem;
+  padding-right: 5rem;
+}
+
+.highlights-img img {
+  width: 80rem;
+  border-radius: 0.5rem;
+}
+/* ------------------
+Highlight Section End 
+-------------------*/
+
+/* ---------
+Footer start
+-----------*/
+footer {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .logo {
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.logo img {
+  width: 10rem;
+}
+
+.social-icon {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.social-icon a {
+  color: #00004a;
+  font-size: var(--header4);
+  padding: 0 1rem 0 1rem;
+}
+
+.copyright {
+  padding-bottom: 3rem;
+}
+/* ---------
+Footer End
+-----------*/
